@@ -1,0 +1,4 @@
+include ':uibestpractice'
+include ':activitybestpractice'
+include ':app'
+rootProject.name = "BestPractice"

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ActivityBestPractice</string>
+    <string name="btn_forward">forward</string>
+    <string name="btn_finish_app">finishApp</string>
+</resources>
