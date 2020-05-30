@@ -13,6 +13,8 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/activitybestpractice" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/broadcastbestpractice" />
+            <option value="$PROJECT_DIR$/fragmentpractice" />
             <option value="$PROJECT_DIR$/uibestpractice" />
           </set>
         </option>

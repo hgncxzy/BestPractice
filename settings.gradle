@@ -1,3 +1,5 @@
+include ':broadcastbestpractice'
+include ':fragmentpractice'
 include ':uibestpractice'
 include ':activitybestpractice'
 include ':app'

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:stretchColumns="1"
+    tools:ignore="HardcodedText">
+
+    <TableRow>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:text="Account:" />
+
+        <EditText
+            android:id="@+id/accountEdit"
+            android:layout_height="wrap_content"
+            android:hint="input your account"
+            tools:ignore="Autofill,TextFields" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:text="Password:" />
+
+        <EditText
+            android:id="@+id/passwordEdit"
+            android:layout_height="wrap_content"
+            android:hint="input your password"
+            android:inputType="textPassword"
+            tools:ignore="Autofill" />
+    </TableRow>
+
+    <TableRow>
+
+        <Button
+            android:id="@+id/login"
+            android:layout_height="wrap_content"
+            android:layout_span="2"
+            android:text="Login" />
+    </TableRow>
+
+</TableLayout>
