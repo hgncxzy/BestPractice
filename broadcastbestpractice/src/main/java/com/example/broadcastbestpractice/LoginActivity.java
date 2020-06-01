@@ -16,6 +16,8 @@ import com.example.broadcastbestpractice.permission.FloatTool;
 
 /**
  * 《第一行代码》 第五章，广播的最佳实践 -- 强制下线
+ *
+ * @author xzy
  */
 public final class LoginActivity extends BaseActivity {
 
@@ -24,9 +26,9 @@ public final class LoginActivity extends BaseActivity {
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        // TODO Auto-generated method stub
         super.onCreate(savedInstanceState);
-        FloatTool.RequestOverlayPermission(this);
+        // 动态申请权限
+        FloatTool.requestOverlayPermission(this);
         setContentView(R.layout.activity_login);
         etAccount = findViewById(R.id.accountEdit);
         etPass = findViewById(R.id.passwordEdit);
@@ -38,7 +40,7 @@ public final class LoginActivity extends BaseActivity {
                 String account = etAccount.getText().toString();
                 String password = etPass.getText().toString();
                 //模拟登陆
-                if (account.equals("xu") && password.equals("123")) {
+                if ("xu".equals(account) && "123".equals(password)) {
                     Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                     startActivity(intent);
                     finish();
@@ -52,6 +54,7 @@ public final class LoginActivity extends BaseActivity {
     /**
      * Activity执行结果
      */
+    @Override
     @RequiresApi(api = Build.VERSION_CODES.M)
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);

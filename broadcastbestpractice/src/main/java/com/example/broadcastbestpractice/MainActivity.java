@@ -10,6 +10,9 @@ import androidx.annotation.Nullable;
 
 import com.example.broadcastbestpractice.base.BaseActivity;
 
+/**
+ * @author xzy
+ */
 public class MainActivity extends BaseActivity {
 
     @Override

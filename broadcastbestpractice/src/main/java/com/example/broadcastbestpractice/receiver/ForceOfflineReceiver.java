@@ -15,6 +15,9 @@ import com.example.broadcastbestpractice.controller.ActivityController;
 
 import java.util.Objects;
 
+/**
+ * @author xzy
+ */
 public class ForceOfflineReceiver extends BroadcastReceiver {
 
     @RequiresApi(api = Build.VERSION_CODES.O)
@@ -39,7 +42,8 @@ public class ForceOfflineReceiver extends BroadcastReceiver {
         });
         AlertDialog alertDialog = dialogBuilder.create();
         //需要设置AlertDialog的类型，保证在广播接收器中可以正常弹出
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+        // Android 8.0 以及以后的系统需要这样设置
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             // 前提要动态申请相关权限（android.settings.action.MANAGE_OVERLAY_PERMISSION），不然依然会闪退
             Objects.requireNonNull(alertDialog.getWindow())
                     .setType(WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY);
